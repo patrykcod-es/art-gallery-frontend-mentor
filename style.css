@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(21, 21, 21);
+  font-size: 62.5%;
+}
+img {
+  margin-bottom: 1.3rem;
+}
+
+
+a:link, a:visited{
+  text-decoration: none;
+}
+
+.hero-wrapper,
+.gallery-grid {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.paragraph {
+  color: rgb(68, 68, 68);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+.header {
+  font-size: 3.2rem;
+  line-height: 2.8rem;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+}
+.hero-text {
+  margin-bottom: 2rem;
+}
+.btn {
+  border: none;
+  background-color: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 1.5rem 1.5rem;
+  max-height: 4rem;
+}
+.hero-buttons {
+  display: flex;
+  margin-bottom: 7rem;
+}
+.hero-btn-dark {
+  color: #fff;
+  background-color: rgb(21, 21, 21);
+}
+.hero-btn-light {
+  color: #fff;
+  background-color: #d5966c;
+}
+.gallery-header {
+  margin-bottom: 1.4rem;
+}
+.dark {
+  background-color: rgb(21, 21, 21);
+  color: #fff;
+  padding: 2rem 1rem;
+}
+.gallery-text-dark {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.footer {
+  color: #fff;
+  background-color: rgb(21, 21, 21);
+  padding: 2rem 2rem;
+}
+.footer-header {
+  font-size: 1.5rem;
+  line-height: 0.9;
+  letter-spacing: 0px;
+}
+.footer-text {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #fff;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+}
+.picture1tablet,
+.picture2tablet,
+.picture3tablet {
+  display: none;
+}
+
+/* ===================== LOCATION ===================== */
+
+.location-header{
+    background-image: url(/assets/mobile/image-map.png);
+    /* background-position: center; */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    
+    object-fit: contain;
+    min-width: 100%;
+    /* width: 100%; */
+    min-height: 65vh;
+    /* height: 65%; */
+    background-color: rgb(119, 113, 113);
+
+}
+.location-main{
+    background-color: black;
+    padding: 3rem 1rem .5rem;
+}
+.header-white{
+    color: #fff;
+    font-size: 2.5rem;
+}
+.header-golden{
+    color: #d5966c;
+    font-size: 2rem;
+}
+.paragraph-location{
+    color: #fff;
+    font-size: 1rem;
+}
+.footer-location{
+    background-color: #d5966c;
+    padding: 1rem;
+}
+.footer-text-location{
+    color: rgb(21, 21, 21);
+    
+}
+
+
+
+
+
+@media screen and (min-width: 630px) {
+  .picture1tablet,
+  .picture2tablet,
+  .picture3tablet {
+    display: block;
+  }
+  .picture1,
+  .picture2,
+  .picture3 {
+    display: none;
+  }
+
+  img {
+    margin-bottom: 0;
+  }
+  .hero-img {
+    display: none;
+  }
+  .hero {
+    background-image: url(/assets/tablet/image-hero.jpg);
+    height: 43rem;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 1fr;
+    max-width: 820px;
+  }
+  .hero-wrapper {
+    max-width: 22rem;
+    grid-column: 2;
+    grid-row: 3;
+    margin: 0;
+    margin-top: 5rem;
+    width: 100%;
+  }
+  .hero-header {
+    font-size: 3.7rem;
+    margin-bottom: 4rem;
+    line-height: 0.8;
+  }
+  .hero .paragraph {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+  .gallery-grid {
+    width: 95%;
+    max-width: 90%;
+    height: 70rem;
+    margin: 6rem auto 0;
+    display: grid;
+    justify-content: stretch;
+    justify-items: stretch;
+    grid-template-columns: 42% 15% 42%;
+    grid-template-rows: 35% 25% 40%;
+    grid-template-areas:
+      "textTop topPicture topPicture"
+      "bigPicture bigPicture smallPicture"
+      "bigPicture bigPicture bottomText";
+    gap: 1rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+  }
+
+  .picture1tablet {
+    grid-area: topPicture;
+    align-self: end;
+  }
+  .day {
+    grid-area: textTop;
+    align-self: end;
+    justify-self: center;
+  }
+
+  .picture2tablet {
+    grid-area: bigPicture;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .picture3tablet {
+    grid-area: smallPicture;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: stretch;
+  }
+  .gallery-dark {
+    grid-area: bottomText;
+    padding: 5rem 1rem;
+    margin-bottom: 6.6rem;
+    height: 100%;
+  }
+  .gallery-text-dark {
+    width: 100%;
+  }
+  .footer {
+    /* max-width: 40rem; */
+    display: grid;
+    grid-template-columns: 20% 65% 1fr;
+    padding: 3rem 2rem;
+  }
+  .footer-text {
+    max-width: 60%;
+  }
+
+  /* ===================== LOCATION ===================== */
+
+  .location-btns{
+    display: block;
+    margin-left: 3rem;
+  }
+  .location-header{
+    background-image: url(/assets/tablet/image-map.png);
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+  }
+  .header-white{
+    font-size: 4rem;
+    line-height: .8;
+
+  }
+  .location-main{
+    display: grid;
+    grid-template-areas: "header street"
+                          "header address"
+                          ". par";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15% 25% 1fr ;
+  }
+  .header-golden{
+    grid-area: street;
+
+  }
+  .address{
+    grid-area: address;
+  }
+  .par{
+    grid-area: par;
+    width: 90%;
+  }
+  .footer-location{
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    padding-top: 3rem;
+    gap: 4rem;
+  }
+  .footer-header-location{
+    font-size: 2rem;
+    line-height: .8;
+    padding-left: 2rem;
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 89vh;
+    background-image: url(/assets/desktop/image-hero.jpg);
+    background-size: 70%;
+    background-position-x: center;
+    transform: translate(10%);
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .hero::before {
+    content: "";
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: -12rem;
+    background-color: black;
+  }
+  .hero-wrapper {
+    display: grid;
+    grid-template-areas:
+      "header par"
+      ". CTA";
+    grid-template-columns: 60% 1fr;
+    min-width: 950px;
+    /* max-width: 500px; */
+    z-index: 3;
+    margin: -8rem auto 0;
+    max-width: 14rem;
+
+  }
+  .hero-text {
+    width: 90%;
+  }
+  .hero-buttons {
+    grid-area: CTA;
+    /* min-width: 20rem; */
+  }
+  .hero-header {
+    color: #fff;
+    font-size: 75px;
+  }
+  
+ 
+}
+@media screen and (min-width: 1025px){
+    body{
+        max-width: 1025px;
+        margin: 0 auto;
+    }
+
+
+    /* ===================== LOCATION ===================== */
+
+    .location-header{
+      background-image: url(/assets/desktop/image-map.png);
+    }
+   
+}
+
+
